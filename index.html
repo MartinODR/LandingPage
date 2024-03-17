@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
+    <!--seccion header, imagen menu-->
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
@@ -43,5 +44,51 @@
             <a href="#" class="cta">El Camino ha comenzado</a>
         </section>
     </header>
+    <!--seccion principal-->
+    <main>
+        <section class="container about">
+            <h2 class="subtitles">Que aprenderas en este Camino?</h2>
+            <p class="about__paragraph">Todo lo necesario y obligatorio de Css, (flexbox, Grid, Custom
+                properties, Position, Animations, Box Model y mas)</p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./images/shapes.svg" class="about__icon" alt="about_icon">
+                    <h3 class="about__title">CSS Layouts</h3>
+                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus officiis eos odio! Aut sed odio</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/paint.svg" class="about__icon" alt="about_icon">
+                    <h3 class="about__title">Animaciones</h3>
+                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus officiis eos odio! Aut sed odio</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/code.svg" class="about__icon" alt="about_icon">
+                    <h3 class="about__title">Sass</h3>
+                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus officiis eos odio! Aut sed odio</p>
+                </article>
+            </div>        
+        </section>
+        <!--esta seccion no tendra el container anterior dentro de la seccion porque tendra un fondo independiente, tendra propio-->
+        <section class="knowledge">    
+            <div class="knowledge__container container">
+                <div class="knowledge__texts">
+                    <h2 class="subtitle">Curso completo de CC3. Domina CSS de una vez por todas!</h2>
+                    <p class="knowledge__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsam totam neque obcaecati iste soluta, aut laborum veritatis iure eos quis vel laudantium enim accusantium facere? Aperiam hic similique cumque!</p>
+                    <a href="#" class="cta">Entra al curso</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="./images/macbook.png" class="knowledge__img" alt="">
+                </figure>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
