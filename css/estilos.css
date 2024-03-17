@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-body{
+  body{
     font-family: "Poppins", sans-serif;
-}
+  }
 
-:root{                                                  /*variables para acceder a las custom propertis desde cualquier elemento*/
+  :root{                                                  /*variables para acceder a las custom propertis desde cualquier elemento*/
     --padding-container: 100px 0;                       /*tendra un padding arriba y abajo de 100px y 0 hacia los lados*/
     --color-title: #001a49;                           /*se denomina custom property*/  
-}
+  }
 
-.poppins-light {
+  .poppins-light {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -213,4 +213,130 @@ body{
   .knowledge__img{
     width: 100%;
     display: block;
+  }
+
+  /* price */
+
+  .price{                             /*Contenedor Principal*/
+    text-align: center;
+  }
+
+  .price__table{                      /*Contenedor de las Tablas*/
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;                   /*En caso de que no entren los elementos, desborda, responsive flexbox*/
+    gap: 2.5em;                       /*Flexbox, Grid*/
+    justify-content: space-evenly;      /*dar espaciado equitativamente hacia todas las esquinas horizontal*/
+    align-items: center;
+  }
+
+  .price__element{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #697871;                   /*Custom property*/
+    --color-price:#1D293F;
+    --bg-cta:#fff;
+    --color-cta:#5454D4;
+    --color-items:#696871;  
+  }
+
+ .price__element--best{           /*Cuntom propertys usada cmo subclase en el div*/
+  width: 370px;
+  padding: 60px 40px;
+  background-color: #ff7143;
+  --color-plan:rgb(255 255 255 / 75%);
+  --color-price:#fff;
+  --bg-cta:#9F3919;
+  --color-cta:#fff;
+  --color-items:#fff;
+ }
+
+  .price__name{
+    color:var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+
+  .price__price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+  }
+
+  .price__items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color:var(--color-items);
+  }
+
+  .price__cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Testimony */
+
+  .testimony{
+    background-color: #e5e5f7;
+  }
+
+  .testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;      /*Columnas, izquierda, medio, derecha*/
+    gap: 1em;                                   /*Espaciado*/
+    align-items: center;
+  }
+
+  .testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;             /*que el contenido se vaya a las esquinas*/
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;                           /*ajuste de los comentarios siguientes, que empiece en la 2da y termine en la 3ra*/
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .testimony__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;                       /*ajuste posicion img*/
+  }
+
+  .testimony__texts{
+    max-width: 700px;
+  }
+
+  .testimony__course{
+    background-color: royalblue;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .testimony__arrow{
+    width: 90%;
+    cursor:pointer;
   }
