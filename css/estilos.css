@@ -273,6 +273,8 @@ body {
 
 .testimony__container{
     display: grid;
+    padding-top: 1%;                                        /*borde superior del container*/
+    padding-bottom: 1%;                                     /*borde inferior del container*/
     grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
